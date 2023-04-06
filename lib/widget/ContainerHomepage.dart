@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/responsive.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
 import 'package:trustwallet_clone/widget/IconOption.dart';
 
 class HomePageContainer extends StatelessWidget {
@@ -34,7 +34,7 @@ class HomePageContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(
-                Icons.notification_important_rounded,
+                Icons.notifications_outlined,
                 color: Colors.black,
                 size: getProportionateScreenHeight(30),
               ),

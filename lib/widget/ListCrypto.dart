@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/responsive.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
 
 class ListCrypto extends StatelessWidget {
   final String image;

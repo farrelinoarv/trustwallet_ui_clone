@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/responsive.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
 
 class IconNavbar extends StatelessWidget {
   final Icon icon;

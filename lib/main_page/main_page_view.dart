@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/responsive.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
 import 'package:trustwallet_clone/widget/BottomNavbar.dart';
 import 'package:trustwallet_clone/widget/ContainerHomepage.dart';
 import 'package:trustwallet_clone/widget/ListCrypto.dart';
@@ -65,7 +65,11 @@ class _MainPageState extends State<MainPage> {
               ],
             ),
           ),
-          BottomNavBar()
+          BottomNavBar(
+              isActiveHome: true,
+              isActiveTrade: false,
+              isActiveDApps: false,
+              isActiveProfile: false),
         ],
       ),
     );

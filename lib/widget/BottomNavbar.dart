@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/responsive.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
+import 'package:trustwallet_clone/widget/BottomNabvarItem.dart';
 
 class BottomNavBar extends StatelessWidget {
+  final bool isActiveHome;
+  final bool isActiveTrade;
+  final bool isActiveDApps;
+  final bool isActiveProfile;
+
   const BottomNavBar({
     super.key,
+    required this.isActiveHome,
+    required this.isActiveTrade,
+    required this.isActiveDApps,
+    required this.isActiveProfile,
   });
 
   @override
@@ -18,90 +28,25 @@ class BottomNavBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  height: getProportionateScreenHeight(80),
-                  width: getProportionateScreenWidth(80),
-                  // color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.home,
-                        color: Color(0xff3375BB),
-                        size: getProportionateScreenHeight(40),
-                      ),
-                      Text(
-                        'Home',
-                        style: TextStyle(
-                            color: Color(0xff3375BB),
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff3375BB),
-                        size: getProportionateScreenHeight(5),
-                      ),
-                    ],
-                  ),
+                BottomNavbarItem(
+                  isActive: isActiveHome,
+                  itemName: 'Home',
+                  icon: Icons.shield_rounded,
                 ),
-                Container(
-                  height: getProportionateScreenHeight(80),
-                  width: getProportionateScreenWidth(80),
-                  // color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.swap_calls_outlined,
-                        color: Colors.grey,
-                        size: getProportionateScreenHeight(40),
-                      ),
-                      Text(
-                        'Trade',
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                BottomNavbarItem(
+                  isActive: isActiveTrade,
+                  itemName: 'Discover',
+                  icon: Icons.search,
                 ),
-                Container(
-                  height: getProportionateScreenHeight(80),
-                  width: getProportionateScreenWidth(80),
-                  // color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.menu_book,
-                        color: Colors.grey,
-                        size: getProportionateScreenHeight(40),
-                      ),
-                      Text(
-                        'DApps',
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                BottomNavbarItem(
+                  isActive: isActiveDApps,
+                  itemName: 'DApps',
+                  icon: Icons.window_rounded,
                 ),
-                Container(
-                  height: getProportionateScreenHeight(80),
-                  width: getProportionateScreenWidth(80),
-                  // color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.person,
-                        color: Colors.grey,
-                        size: getProportionateScreenHeight(40),
-                      ),
-                      Text(
-                        'Profile',
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                BottomNavbarItem(
+                  isActive: isActiveProfile,
+                  itemName: 'Settings',
+                  icon: Icons.settings,
                 ),
               ],
             ),
