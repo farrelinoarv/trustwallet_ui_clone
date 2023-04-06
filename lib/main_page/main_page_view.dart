@@ -66,10 +66,11 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           BottomNavBar(
-              isActiveHome: true,
-              isActiveTrade: false,
-              isActiveDApps: false,
-              isActiveProfile: false),
+            isActiveHome: true,
+            isActiveTrade: false,
+            isActiveDApps: false,
+            isActiveProfile: false,
+          ),
         ],
       ),
     );
