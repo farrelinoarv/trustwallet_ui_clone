@@ -26,11 +26,12 @@ class ListCrypto extends StatelessWidget {
       child: Row(
         children: [
           Container(
+            // color: Colors.amber,
             height: getProportionateScreenHeight(50),
             width: getProportionateScreenWidth(50),
             child: Image.asset(
               image,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
           ),
           SizedBox(width: getProportionateScreenWidth(20)),

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:trustwallet_clone/main_page/main_page_view.dart';
+import 'package:trustwallet_clone/responsive/responsive.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -57,6 +58,12 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    //inisialisasi ukuran layar
+    SizeConfig().init(context);
+    //inisialisasi ukuran lebar layar
+    final width = SizeConfig.screenWidth;
+    //inisialisasi ukuran tinggi layar
+    final height = SizeConfig.screenHeight;
     return Scaffold(
       backgroundColor: Colors.white,
       body: FadeTransition(
@@ -67,14 +74,14 @@ class _SplashScreenState extends State<SplashScreen>
             children: [
               Icon(
                 Icons.shield_outlined,
-                size: 90,
+                size: getProportionateScreenWidth(90),
               ),
               SizedBox(height: 20),
               Text(
                 'Trust Wallet',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: getProportionateScreenWidth(30),
                 ),
               ),
             ],

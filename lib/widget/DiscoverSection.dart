@@ -20,12 +20,12 @@ class DiscoverSection extends StatelessWidget {
           Text(
             name,
             style: TextStyle(
-                fontSize: getProportionateScreenHeight(15),
+                fontSize: getProportionateScreenWidth(15),
                 fontWeight: FontWeight.w600),
           ),
           if (showArrow)
             Icon(Icons.arrow_forward_ios,
-                size: getProportionateScreenHeight(15)),
+                size: getProportionateScreenWidth(15)),
         ],
       ),
     );

@@ -42,7 +42,7 @@ class HomePageContainer extends StatelessWidget {
                 "\$0,00",
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: getProportionateScreenHeight(30),
+                  fontSize: getProportionateScreenWidth(30),
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -60,7 +60,7 @@ class HomePageContainer extends StatelessWidget {
             "Main Wallet 1",
             style: TextStyle(
               color: Colors.black,
-              fontSize: getProportionateScreenHeight(15),
+              fontSize: getProportionateScreenWidth(15),
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -115,7 +115,7 @@ class HomePageContainer extends StatelessWidget {
                       Text(
                         "Tokens",
                         style: TextStyle(
-                          fontSize: getProportionateScreenHeight(15),
+                          fontSize: getProportionateScreenWidth(15),
                           fontWeight: FontWeight.bold,
                           color: Color(
                             0xff3375BB,
@@ -144,7 +144,7 @@ class HomePageContainer extends StatelessWidget {
                       Text(
                         "NFTs",
                         style: TextStyle(
-                          fontSize: getProportionateScreenHeight(15),
+                          fontSize: getProportionateScreenWidth(15),
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
                         ),

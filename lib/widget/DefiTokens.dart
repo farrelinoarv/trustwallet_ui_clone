@@ -27,6 +27,7 @@ class DefiTokens extends StatelessWidget {
       child: Row(
         children: [
           Container(
+            // color: Colors.amber,
             width: getProportionateScreenWidth(50),
             height: getProportionateScreenHeight(50),
             child: Image.asset(imgsrc),

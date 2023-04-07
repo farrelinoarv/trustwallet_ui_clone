@@ -28,18 +28,8 @@ class Defi extends StatelessWidget {
           Container(
             width: getProportionateScreenWidth(50),
             height: getProportionateScreenHeight(50),
-            decoration: BoxDecoration(
-              borderRadius:
-                  BorderRadius.circular(getProportionateScreenHeight(15)),
-            ),
-            child: ClipRRect(
-              borderRadius:
-                  BorderRadius.circular(getProportionateScreenHeight(15)),
-              child: Image.asset(
-                imgsrc,
-                fit: BoxFit.cover,
-              ),
-            ),
+            // color: Colors.amber,
+            child: Image.asset(imgsrc),
           ),
           SizedBox(width: getProportionateScreenWidth(20)),
           Expanded(

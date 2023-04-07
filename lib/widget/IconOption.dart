@@ -33,7 +33,7 @@ class IconNavbar extends StatelessWidget {
             label,
             style: TextStyle(
               color: Color(0xff3375BB),
-              fontSize: getProportionateScreenHeight(13),
+              fontSize: getProportionateScreenWidth(13),
               fontWeight: FontWeight.w500,
             ),
           )
