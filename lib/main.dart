@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:trustwallet_clone/main_page/main_page_view.dart';
+import 'package:trustwallet_clone/splashscreen/splash.dart';
+
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      title: 'Your App',
+      home: SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        '/MainPage': (BuildContext context) => new MainPage(),
+      },
     );
   }
 }
