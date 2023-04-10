@@ -23,6 +23,7 @@ class _MainPageState extends State<MainPage> {
     //inisialisasi ukuran tinggi layar
     final height = SizeConfig.screenHeight;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           HomePageContainer(),

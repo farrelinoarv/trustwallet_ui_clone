@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trustwallet_clone/pages/browser_page/browser_page_view.dart';
 import 'package:trustwallet_clone/pages/discover_page/discover_page_view.dart';
 import 'package:trustwallet_clone/pages/main_page/main_page_view.dart';
+import 'package:trustwallet_clone/pages/settings_page/settings_page_view.dart';
 import 'package:trustwallet_clone/responsive/responsive.dart';
 import 'package:trustwallet_clone/widget/BottomNabvarItem.dart';
 
@@ -110,7 +111,26 @@ class BottomNavBar extends StatelessWidget {
                   isActive: isActiveProfile,
                   itemName: 'Settings',
                   icon: Icons.settings,
-                  ontap: () {},
+                  ontap: () {
+                    isActiveProfile
+                        ? {}
+                        : Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                              transitionDuration: Duration(milliseconds: 200),
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      SettingsPage(),
+                              transitionsBuilder: (context, animation,
+                                  secondaryAnimation, child) {
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
+                  },
                 ),
               ],
             ),

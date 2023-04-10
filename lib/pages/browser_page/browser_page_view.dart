@@ -25,6 +25,7 @@ class _BrowserPageState extends State<BrowserPage> {
         left: false, // set to true to avoid safe area padding on left
         right: false,
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           // backgroundColor: Colors.white,
           body: Column(
             children: [
