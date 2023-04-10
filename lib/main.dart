@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/main_page/main_page_view.dart';
+import 'package:trustwallet_clone/pages/main_page/main_page_view.dart';
 import 'package:trustwallet_clone/splashscreen/splash.dart';
 
 import 'dart:async';

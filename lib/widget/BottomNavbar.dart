@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trustwallet_clone/browser_page/browser_page_view.dart';
-import 'package:trustwallet_clone/discover_page/discover_page_view.dart';
-import 'package:trustwallet_clone/main_page/main_page_view.dart';
+import 'package:trustwallet_clone/pages/browser_page/browser_page_view.dart';
+import 'package:trustwallet_clone/pages/discover_page/discover_page_view.dart';
+import 'package:trustwallet_clone/pages/main_page/main_page_view.dart';
 import 'package:trustwallet_clone/responsive/responsive.dart';
 import 'package:trustwallet_clone/widget/BottomNabvarItem.dart';
 
@@ -41,7 +41,7 @@ class BottomNavBar extends StatelessWidget {
                         : Navigator.pushReplacement(
                             context,
                             PageRouteBuilder(
-                              transitionDuration: Duration(milliseconds: 100),
+                              transitionDuration: Duration(milliseconds: 200),
                               pageBuilder:
                                   (context, animation, secondaryAnimation) =>
                                       MainPage(),
@@ -66,7 +66,7 @@ class BottomNavBar extends StatelessWidget {
                         : Navigator.pushReplacement(
                             context,
                             PageRouteBuilder(
-                              transitionDuration: Duration(milliseconds: 100),
+                              transitionDuration: Duration(milliseconds: 200),
                               pageBuilder:
                                   (context, animation, secondaryAnimation) =>
                                       DiscoverPage(),
@@ -91,7 +91,7 @@ class BottomNavBar extends StatelessWidget {
                         : Navigator.pushReplacement(
                             context,
                             PageRouteBuilder(
-                              transitionDuration: Duration(milliseconds: 100),
+                              transitionDuration: Duration(milliseconds: 200),
                               pageBuilder:
                                   (context, animation, secondaryAnimation) =>
                                       BrowserPage(),
