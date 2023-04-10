@@ -22,7 +22,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       body: Column(
         children: [
           PageTitle(name: 'Discover'),
@@ -166,32 +166,26 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       imgsrc: 'assets/curve.png',
                       nama: 'Curve',
                       sc: 'Creating deep on-chain liquidity using advanced bonding curves',
-                      showCategory: false,
-                      category: 'category'),
+                     ),
                   Defi(
                       imgsrc: 'assets/yearn.png',
                       nama: 'yearn.finance',
                       sc: 'Decentralized finance (DeFi) platform which aims to perform a host of functions such as aggregated liquidty, leverage trading...',
-                      showCategory: false,
-                      category: 'category'),
+                      ),
                   Defi(
                       imgsrc: 'assets/uniswap.png',
                       nama: 'Uniswap Exchange',
                       sc: 'Uniswap is a protocol for automated token exchange',
-                      showCategory: false,
-                      category: 'category'),
+                      ),
                   Defi(
                       imgsrc: 'assets/aave.jpeg',
                       nama: 'Aave',
                       sc: 'Open Source and Non-Custodial protocol to earn interest on desposits & borrow assets',
-                      showCategory: false,
-                      category: 'category'),
-                      Defi(
+                      ),
+                  Defi(
                       imgsrc: 'assets/inch.png',
                       nama: '1inch.io',
-                      sc: 'Token Swap Aggregator',
-                      showCategory: false,
-                      category: 'category'),
+                      sc: 'Token Swap Aggregator',),
                 ],
               ),
             ),

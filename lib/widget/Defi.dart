@@ -5,16 +5,12 @@ class Defi extends StatelessWidget {
   final String imgsrc;
   final String nama;
   final String sc;
-  final bool showCategory;
-  final String category;
 
   const Defi({
     super.key,
     required this.imgsrc,
     required this.nama,
     required this.sc,
-    required this.showCategory,
-    required this.category,
   });
 
   @override
@@ -53,22 +49,6 @@ class Defi extends StatelessWidget {
                       Expanded(
                           child: Container(child: Text(sc, maxLines: null))),
                       SizedBox(width: getProportionateScreenWidth(10)),
-                      if (showCategory)
-                        Container(
-                          padding: EdgeInsets.all(
-                            getProportionateScreenWidth(5),
-                          ),
-                          decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(
-                                  getProportionateScreenHeight(5))),
-                          child: Text(
-                            category,
-                            style: TextStyle(
-                                fontSize: getProportionateScreenWidth(10),
-                                color: Colors.white),
-                          ),
-                        ),
                     ],
                   )
                 ],

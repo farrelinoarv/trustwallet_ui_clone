@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trustwallet_clone/browser_page/browser_page_view.dart';
 import 'package:trustwallet_clone/discover_page/discover_page_view.dart';
 import 'package:trustwallet_clone/main_page/main_page_view.dart';
 import 'package:trustwallet_clone/responsive/responsive.dart';
@@ -84,7 +85,26 @@ class BottomNavBar extends StatelessWidget {
                   isActive: isActiveDApps,
                   itemName: 'DApps',
                   icon: Icons.window_rounded,
-                  ontap: () {},
+                  ontap: () {
+                    isActiveDApps
+                        ? {}
+                        : Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                              transitionDuration: Duration(milliseconds: 100),
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      BrowserPage(),
+                              transitionsBuilder: (context, animation,
+                                  secondaryAnimation, child) {
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
+                  },
                 ),
                 BottomNavbarItem(
                   isActive: isActiveProfile,
